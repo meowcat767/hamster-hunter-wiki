@@ -1,0 +1,12 @@
+[project]
+site_name = "Hamster Hunter Wiki"
+
+[project.theme]
+logo = "logo.png"
+favicon = "logo.png"
+features = [
+    "search.highlight"
+]
+
+[project.theme.palette]
+scheme = "slate"
