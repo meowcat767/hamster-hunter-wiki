@@ -1,4 +1,5 @@
 # Hamster Hunter Wiki
 
-All assets are the content from the game unmodified, with spelling errors.
-
+> [!NOTE]
+    Assets are spelled exactly how the game references them internally.
+    Do not open issues renaming assets.
