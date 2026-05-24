@@ -3,13 +3,23 @@ site_name = "Hamster Hunter Wiki"
 site_dir = "dist"
 docs_dir = "pages"
 site_url = "hh.github.aspy.dev"
+repo_url = "https://github.com/someaspy/hamster-hunter-wiki"
+edit_uri = "edit/main/pages"
 
 [project.theme]
-logo = "/assets/logo.png"
-favicon = "/assets/logo.png"
+logo = "/assets/hamster.png"
+favicon = "/assets/blood-splatter-png-5.png"
 features = [
-    "search.highlight"
+    "search.highlight",
+    "content.action.edit",
+    "content.action.view"
 ]
+font = false # Don't make a connection to Google fonts
+
+
+
+[project.theme.icon]
+repo = "fontawesome/brands/git-alt"
 
 [project.theme.palette]
 scheme = "slate"
