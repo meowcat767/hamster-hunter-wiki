@@ -1,7 +1,7 @@
 {
-    // Zensical makes use of HTML tags in Markdown
-    "MD033": false,
-    
-    // Zensical handles line breaks fine
-    "MD013": false
+	// Zensical makes use of HTML tags in Markdown
+	"MD033": false,
+
+	// Zensical handles line breaks fine
+	"MD013": false
 }

@@ -2,6 +2,7 @@
 site_name = "Hamster Hunter Wiki"
 site_dir = "dist"
 docs_dir = "pages"
+site_url = "hh.github.aspy.dev"
 
 [project.theme]
 logo = "/assets/logo.png"
