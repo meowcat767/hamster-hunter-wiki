@@ -35,7 +35,7 @@ jobs:
       - run: curl -fsSL https://d2lang.com/install.sh | sh -s --
 
       - name: Cache playwright binaries
-        uses: actions/cache/restore@v5
+        uses: actions/cache/save@v5
         with:
           path: ~/.cache/ms-playwright
           key: playwright-cache
