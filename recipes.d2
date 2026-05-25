@@ -60,8 +60,9 @@ Pie Recipe: {
   Grinder.class: Grinder
   Combiner.class: Combiner
   Juicer.class: Juicer
+  Cooker.class: Cooker
 
-  Hamster -> Grinder -> Combiner
+  Hamster -> Grinder -> Cooker -> Combiner
   Hamster -> Juicer -> Combiner
   Combiner -> Pie
 }
