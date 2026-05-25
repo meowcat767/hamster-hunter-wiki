@@ -7,7 +7,10 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
+# Thank you to https://freddydumont.com/blog/d2-github-actions for D2 actions
 jobs:
+
   deploy:
     environment:
       name: github-pages
@@ -23,6 +26,24 @@ jobs:
         with:
           enable-cache: true
       - run: uv sync --locked --all-extras --dev
+      
+      - run: curl -fsSL https://d2lang.com/install.sh | sh -s --
+
+      - name: Cache playwright binaries
+        id: cache-playwright
+        uses: actions/cache@v5
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-cache
+
+      - name: Install playwright
+        if: steps.cache-playwright.outputs.cache-hit != 'true'
+        run: npx playwright install --with-deps chromium
+
+
+      - name: Generate diagram
+        run: d2 recipes.d2 pages/assets/recipes.png
+
       - run: uv run zensical build --clean 
       - uses: actions/upload-pages-artifact@v5
         with:

@@ -1,0 +1,67 @@
+vars: {
+  d2-config: {
+    layout-engine: elk
+    theme-id: 200
+  }
+}
+
+classes: {
+  Hamster: {
+    icon: pages/assets/Hamster.webp
+    label: Hamster
+    shape: image
+  }
+
+  Skinner: {
+    icon: pages/assets/IndustrialSkinner.webp
+    label: Industrial Skinner
+    shape: image
+  }
+
+  Grinder: {
+    icon: pages/assets/IndustrialGrinder.webp
+    label: Industrial Grinder
+    shape: image
+  }
+
+  Cooker: {
+    icon: pages/assets/IndustrialProcessor.webp
+    label: Industrial Cooker
+    shape: image
+  }
+
+  Combiner: {
+    icon: pages/assets/IndustrialCombiner.webp
+    label: Industrial Combiner
+    shape: image
+  }
+
+  Juicer: {
+    icon: pages/assets/IndustrialJuicer.webp
+    label: Industrial Juicer
+    shape: image
+  }
+}
+
+Burger Recipe: {
+  Hamster.class: Hamster
+  Skinner.class: Skinner
+  Grinder.class: Grinder
+  Combiner.class: Combiner
+  Cooker.class: Cooker
+
+  Hamster -> Skinner -> Combiner
+  Hamster -> Grinder -> Cooker -> Combiner
+  Combiner -> Burger
+}
+
+Pie Recipe: {
+  Hamster.class: Hamster
+  Grinder.class: Grinder
+  Combiner.class: Combiner
+  Juicer.class: Juicer
+
+  Hamster -> Grinder -> Combiner
+  Hamster -> Juicer -> Combiner
+  Combiner -> Pie
+}

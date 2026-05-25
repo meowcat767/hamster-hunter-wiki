@@ -3,3 +3,4 @@ dist
 .venv
 node_modules
 __pycache__
+pages/assets/recipes.png
